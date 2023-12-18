@@ -1,0 +1,16 @@
+<div class="side-nav-content">
+    <br />
+    <ul class="nav-list" [ngClass]="{ 'nav-list-open': sideNavStatus }">
+        <li class="nav-list-item" *ngFor="let item of List; let i = index" (mouseenter)="onItemMouseEnter(item)"
+            (mouseleave)="onItemMouseLeave()">
+            <i class="{{ item.icon }}"></i>
+            <span class="border-white">
+                <a *ngIf="i !== 0" href="#">{{ item.name }}</a>
+
+                <a *ngIf="i === 0" [routerLink]="item.routerLink">{{ item.name }} </a>
+                &nbsp;
+            </span>
+        </li>
+    </ul>
+
+</div>

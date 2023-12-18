@@ -1,0 +1,57 @@
+<div class="container"
+    style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; ">
+
+    <div class="container" style="background-color: aliceblue;width: 500px; border-radius: 20px;">
+        <h2 class="mb-4 text-center" style="font-size: medium ;">Create New Account </h2>
+        <form #registerform="ngForm" class="needs-validation" novalidate (ngSubmit)="register(registerform)">
+
+
+
+
+            <div class="form-group">
+                <label class="form-label" for="email"><i class="fas fa-envelope"></i> mail address</label>
+                <input #email (ngModel)="signup.email" required type="email"
+                    class="form-control bg-gray-200 appearance-none border-2 border" name="email"
+                    placeholder="Enter your email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                    anyone else.</small>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="tel"><i class="fas fa-phone"></i> telelephone</label>
+                <input #tel (ngModel)="signup.tel" type="number" required
+                    class="form-control bg-gray-200 appearance-none border-2 border" name="tel" maxlength="8"
+                    placeholder="tel">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="fullname"><i class="fas fa-user"></i> fullname </label>
+                <input #fullname (ngModel)="signup.fullname" type="text" required
+                    class="form-control bg-gray-200 appearance-none border-2 border" name="fullname" maxlength="30"
+                    placeholder="fullanme">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password"><i class="fas fa-lock"></i> Password</label>
+                <input name="password" #password (ngModel)="signup.password" required type="password"
+                    class="form-control  bg-gray-200 appearance-none border-2 border" placeholder="******************"
+                    [type]="changetype ? 'password' : 'text'">
+                <span class="eyeicon" (click)="view()"><i
+                        [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"></i></span>
+            </div>
+
+
+            <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline  w-100"><i
+                    class="fas fa-plus-circle " cButton color="info" shape="rounded-pill"> </i>
+                &nbsp;Submit</button>
+        </form>
+
+        <br> <br>
+
+
+    </div>
+</div>

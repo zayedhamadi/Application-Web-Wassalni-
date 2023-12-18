@@ -1,0 +1,33 @@
+  /* styles.css */
+
+  .welcome-section {
+      padding: 50px;
+  }
+
+  .buttons {
+      margin-top: 20px;
+  }
+
+  .animation-section {
+      margin-top: 50px;
+  }
+
+  .animation-text {
+      font-size: 24px;
+      color: #333;
+      animation: fadeIn 2s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+      0% {
+          opacity: 0;
+      }
+
+      50% {
+          opacity: 1;
+      }
+
+      100% {
+          opacity: 0;
+      }
+  }

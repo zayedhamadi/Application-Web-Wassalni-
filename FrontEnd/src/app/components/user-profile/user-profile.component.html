@@ -1,0 +1,102 @@
+<app-narvbar></app-narvbar>
+<div class="container profile-edit-section">
+    <div class="row gutters">
+        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="account-settings">
+                        <div class="user-profile">
+                            <div class="user-avatar">
+                                <img src="assets/edit/{{ edit?.image ? getLastPartOfPath(edit.image) : '' }}">
+                            </div>
+                            <h5 class="user-name"> <!--{{ edit.fullname }}--></h5>
+                            <h6 class="user-email"><!--{{edit.email}}--></h6>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <!-- Formulaire pour l'édition du profil -->
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-2 text-primary">Détails personnels</h6>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="fullName">Nom complet</label>
+                                <input type="text" class="form-control" id="fullName"
+                                    placeholder="Entrez le nom complet" [(ngModel)]="edit.fullname">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Entrez l'email"
+                                    [(ngModel)]="edit.email">
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Entrez le mot de passe" [(ngModel)]="edit.password">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="tel">Téléphone</label>
+                                <input type="text" class="form-control" id="tel"
+                                    placeholder="Entrez le numéro de téléphone" [(ngModel)]="edit.tel">
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control" id="image" placeholder="Entrez l'URL de l'image"
+                                    [(ngModel)]="edit.image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row gutters">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="text-right">
+                                <button type="reset"
+                                    class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Annuler</button>
+
+                                <button type="button" (click)="delete()"
+                                    class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+
+
+                                    Delete profile</button>
+                                <button type="button"
+                                    class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                                    (click)="updateUser()">Mettre à
+                                    jour</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<!--newman run -->

@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
+    <div class="side-nav-button p-2 me-3 text-light" (click)="sideNavToggle()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <a href="#" class="navbar-brand px-4"></a>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+            <!--menu1:Accueil-->
+            <li class="nav-item dropdown">
+                <a data-bs-toggle="dropdown" class="nav-link dropdown-toggle" role="button">
+                    <i class="fas fa-home"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="/home" class="dropdown-item">Accueil</a>
+                    </li>
+                </ul>
+            </li>
+            &nbsp;&nbsp; &nbsp;
+            <!--menu2:Formateur-->
+            <li class="nav-item dropdown">
+                <a data-bs-toggle="dropdown" class="nav-link dropdown-toggle" role="button">
+                    <i class="fas fa-car"></i>
+
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="/voiture" class="dropdown-item"> Ajouter une Voiture </a>
+                    </li>
+                </ul>
+            </li>
+            &nbsp;&nbsp; &nbsp;
+            <!--menu3:  Liste des Participants-->
+            <li class="nav-item dropdown">
+                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle" role="button">
+                    <i class="fas fa-link"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a class="dropdown-item" href="/editV">
+                            Liste des voitures
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            &nbsp;&nbsp; &nbsp;
+            <!--menu4:Ajouter un Participant-->
+            <li class="nav-item dropdown">
+                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle" role="button">
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                        <a href="/publier" class="dropdown-item">
+                            Ajouter une publication</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--taskira-->
+    <form class="d-flex me-5" (ngSubmit)="onSubmit()">
+        <input class="form-control me-2" type="search" placeholder="Search" [(ngModel)]="searchQuery" name="search" />
+        <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+    &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+    &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+    <!--dropdown-->
+
+    <div class="dropdown profile-logo dropstart">
+        <button class="btn btn-outline-light fa-solid fa-angle-down dropdown-toggle" data-bs-toggle="dropdown">
+            <i class="fas fa-user"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+            <li class="dropdown-divider" style="border: 2px solid black;"></li>
+            <li>
+                <p style="text-align: center; text-transform: capitalize">zayedh80</p>
+            </li>
+            <div class="dropdown-divider" style="border: 2px solid black"></div>
+            <li>
+                <button routerLink="/editU" class="dropdown-item">
+                    <i class="fas fa-user-tie btn btn-outline-info"></i>Votre profil
+                </button>
+            </li>
+            <li>
+                <h6 class="dropdown-header">Logout</h6>
+            </li>
+            <li>
+                <button routerLink="/login" class="dropdown-item">
+                    <i class="fa fa-sign-out btn btn-outline-danger" aria-hidden="true"></i>
+                    Se déconnecter
+                </button>
+            </li>
+        </ul>
+    </div>
+
+</nav>

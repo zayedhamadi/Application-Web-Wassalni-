@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "b6a13ad2-64ec-4ccf-bd06-adafa9e6f642",
+		"name": "Reserve",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27583315"
+	},
+	"item": [
+		{
+			"name": "getSpecificReserve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user/getSpecificReserve/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"getSpecificReserve",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListReserve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/user/getListReserve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"user",
+						"getListReserve"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

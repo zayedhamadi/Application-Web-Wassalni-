@@ -1,0 +1,106 @@
+<app-narvbar></app-narvbar>
+
+
+
+<body style="background-image: url('assets/images/back.jpg'); background-size: cover; background-position: center;">
+
+
+    <div class="container"
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; ">
+
+        <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 20px;color:aliceblue;">Ajouter Votre Voiture</h1>
+
+        <form (ngSubmit)="postePublier()" #publicationForm="ngForm" class="custom-form">
+
+            <div class="form-group">
+                <label for="marqueVoiture" class="custom-label">Marque <span>*</span></label>
+                <select class="form-control custom-select" id="marqueVoiture" name="marqueVoiture"
+                    [(ngModel)]="voiture.marqueVoiture" required #marque="ngModel">
+                    <option value="" disabled selected>Select a car brand</option>
+                    <!-- Replace the options below with your list of car brands -->
+                    <option value="Abarth">Abarth</option>
+                    <option value="Alfa Romeo">Alfa Romeo</option>
+                    <option value="Aston Martin">Aston Martin</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Bentley">Bentley</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Bugatti">Bugatti</option>
+                    <option value="Buick">Buick</option>
+                    <option value="Cadillac">Cadillac</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Chrysler">Chrysler</option>
+                    <option value="Citroen">Citroen</option>
+                    <option value="Dacia">Dacia</option>
+                    <option value="Daewoo">Daewoo</option>
+                    <option value="Daihatsu">Daihatsu</option>
+                    <option value="Dodge">Dodge</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Genesis">Genesis</option>
+                    <option value="GMC">GMC</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Hummer">Hummer</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Infiniti">Infiniti</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Koenigsegg">Koenigsegg</option>
+                    <option value="Lada">Lada</option>
+                    <option value="Lamborghini">Lamborghini</option>
+                    <option value="Lancia">Lancia</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Lotus">Lotus</option>
+                    <option value="Maserati">Maserati</option>
+                    <option value="Maybach">Maybach</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="McLaren">McLaren</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="Mercury">Mercury</option>
+                    <option value="MG">MG</option>
+                    <option value="Mini">Mini</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Morgan">Morgan</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Opel">Opel</option>
+                    <option value="Pagani">Pagani</option>
+                    <option value="Peugeot">Peugeot</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Ram">Ram</option>
+                    <option value="Renault">Renault</option>
+                    <option value="Rolls-Royce">Rolls-Royce</option>
+                    <option value="Saab">Saab</option>
+                    <option value="Seat">Seat</option>
+                    <option value="Skoda">Skoda</option>
+                    <option value="Smart">Smart</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Vauxhall">Vauxhall</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Volvo">Volvo</option>
+
+                    <!-- Add more options as needed -->
+                </select>
+                <div *ngIf="marque.invalid && (marque.dirty || marque.touched)" class="text-danger">
+                    Marque is required.
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="descriptionVoiture" class="custom-label">Description <span>*</span></label>
+                <textarea class="form-control custom-textarea" id="descriptionVoiture" name="descriptionVoiture"
+                    [(ngModel)]="voiture.descriptionVoiture" required #description="ngModel"></textarea>
+                <div *ngIf="description.invalid && (description.dirty || description.touched)" class="text-danger">
+                    Description is required.
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary custom-button">NEXT ></button>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,76 @@
+<app-narvbar></app-narvbar>
+
+<button class="btn btn-success float-right" style="margin-top: 20px;" (click)="openNewVoyageModal()">New Voyage</button>
+
+<div style="text-align: center; padding: 30px;">
+    <form class="form-inline" style="display: flex; justify-content: center;" (ngSubmit)="onSubmit()">
+        <select class="form-control mr-sm-2" style="width: 200px;" [(ngModel)]="filters.villeDepart" name="villeDepart">
+            <option value="">Select Departure</option>
+            <option *ngFor="let country of villes" [value]="country">{{ country }}</option>
+        </select>
+        <select class="form-control mr-sm-2" style="width: 200px;" [(ngModel)]="filters.villeArrive" name="villeArrive">
+            <option value="">Select Destination</option>
+            <option *ngFor="let country of villes" [value]="country">{{ country }}</option>
+        </select>
+
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</div>
+
+
+<!--liste publication-->
+
+<div class="container" *ngIf="!showModal">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let i of listPub" style="margin-bottom: 30px;">
+            <div class="card border-0 shadow-lg" style="transition: 0.3s;">
+                <img src="assets\imgs\download.jpeg" class="card-img-top  rounded-top" alt="Image">
+                <div class="card-body">
+                    <p class="card-text mb-3">
+                        <strong>Email Conductor:</strong> {{ i.conductor.email }} <br>
+                        <strong>Mobile Conducteur:</strong> +216 {{ i.conductor.tel }}<br>
+                    </p>
+                    <h5 class="card-title font-weight-bold">
+                        Trajet: {{ i.villeDepart }} à {{ i.villeArrive }}
+                    </h5>
+                    <p class="card-text mb-3">
+                        <strong>Description:</strong> {{ i.description }} <br>
+                        <strong>Date de départ:</strong> {{ i.dateDepart }} <br>
+                        <strong>Animal:</strong> {{ i.animal }}<br>
+                        <strong>Bagage:</strong> {{ i.bagage }}<br>
+                        <strong>Climatisation:</strong> {{ i.climatiser }} <br>
+
+                        <strong>Voiture:</strong> {{ i.voiture.marqueVoiture }} <br>
+                        <strong>Prix:</strong> {{ i.prix }} DT<br>
+
+                    </p>
+                    <a (click)="reserverPublication(i.idpub)" class="btn btn-primary"
+                        style="margin-right: 90px;">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- fin liste publication-->
+
+
+
+<!-- fin ajouter nouvella publication-->
+
+<!-- footer-->
+
+<!-- fin footer-->
+
+
+
+
+
+
+
+
+
+
+<!--ajouter nouvella publication-->
+<div class="container" *ngIf="showModal" style="width: 500px; height: 200px ; margin-top: 30px; ">
+    <app-new-voyage-modal></app-new-voyage-modal>
+</div>

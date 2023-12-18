@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "14728578-850f-4dfd-af76-e6268225d667",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27583315"
+	},
+	"item": [
+		{
+			"name": "getListPublicationByAdmin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/admin/auth/getListPublicationByAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"admin",
+						"auth",
+						"getListPublicationByAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getConductorsByadmin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/admin/auth/listConductors",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"admin",
+						"auth",
+						"listConductors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListVoitureByAdmin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/admin/auth/getListVoitureByAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"admin",
+						"auth",
+						"getListVoitureByAdmin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

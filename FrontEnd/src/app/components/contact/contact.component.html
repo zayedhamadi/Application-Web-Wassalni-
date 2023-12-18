@@ -1,0 +1,177 @@
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="text-primary text-uppercase">// Contact Us //</h6>
+            <h1 class="mb-5">Contact For Any Query</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <div class="bg-light d-flex flex-column justify-content-center p-4">
+                            <h5 class="text-uppercase">// Booking //</h5>
+                            <p class="m-0" style="text-align: center;"><i
+                                    class="fa fa-envelope-open text-primary me-2"></i>Wassalni@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-light d-flex flex-column justify-content-center p-4">
+                            <h5 class="text-uppercase">// General //</h5>
+                            <p class="m-0" style="text-align: center;"><i
+                                    class="fa fa-envelope-open text-primary me-2"></i>Wassalni@yahoo.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg-light d-flex flex-column justify-content-center p-4">
+                            <h5 class="text-uppercase">// Technical //</h5>
+                            <p class="m-0" style="text-align: center;"><i
+                                    class="fa fa-envelope-open text-primary me-2"></i>wassalni@isetRades.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--end asba -->
+<br>
+<!--  contact section -->
+<div class="body_bg layout_padding"
+    style="background-size: cover; background-image: url(assets/contact/body_bg.jpg); padding: 60px 0;">
+    <!-- Contact Start -->
+    <section class="contact_section">
+        <div class="container">
+            <div class="heading_container">
+                <h2 class="text-info">Let's Get In Touch!</h2>
+                <hr class="bg-info">
+            </div>
+        </div>
+        <div class="container contact_bg layout_padding2-top">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact_form ">
+                        <form (ngSubmit)="userLogin()">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="emailUser"> <i class="fas fa-envelope"></i>
+                                    Email:</label>
+                                <input type="emai" [(ngModel)]="feedback.emailUser" id="emailUser" name="emailUser"
+                                    class="form-control form-control-lg" [formControl]="emailControl" />
+                                <div *ngIf="emailControl.hasError('required') && emailControl.touched"
+                                    class="text-danger">
+                                    Email is required.
+                                </div>
+                                <div *ngIf="emailControl.hasError('email') && emailControl.touched" class="text-danger">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="commantaire"> <i class="fas fa-lock"></i>
+                                    Commantaire:</label>
+                                <textarea type="text" [(ngModel)]="feedback.commantaire" id="commantaire"
+                                    name="commantaire" class="form-control form-control-lg"
+                                    [formControl]="passwordControl"></textarea>
+                                <div *ngIf="passwordControl.hasError('required') && passwordControl.touched"
+                                    class="text-danger">
+                                    Commantaire is required.
+                                </div>
+                            </div>
+                            <button (click)="register()">
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="assets/contact/contact-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="map-container"><iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6389.2199292620735!2d10.179045349999999!3d36.80390094999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd346fb23d3aef%3A0xe5efd4465911c4c6!2sLe%20Passage%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1702544062881!5m2!1sfr!2stn"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<!--Connect -->
+<div class="min">
+    <div class="row text-center padding ">
+        <div class="col-12">
+            <h2 class="text-info">Connect</h2>
+            <hr class="bg-info" style="width: 40%; font-size: medium; margin: 10px auto;">
+        </div>
+        <div class="col-12 social padding">
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+<!--Footer-->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Views and opinions expressed are however those of the author(s) only and do not
+                    necessarily reflect those of the
+                    European Union or the European Education and Culture Executive Agency (EACEA). Neither the European
+                    Union nor EACEA can
+                    be held responsible for them.</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Adresse</h6>
+                <ul class="footer-links">
+                    <li><span class="fas fa-home"></span>Wassalni</li> <br>
+                    <li><span class="fas fa-map-marker-alt"></span>Tunisie</li><br>
+                    <li><span class="fas fa-fax"></span>+ 216 71 781 862</li><br>
+                    <li><span class="fas fa-phone"></span>+(216) 71256354</li><br>
+                    <li> <span class="fas fa-globe"></span>http://www.wassalnifacebook.tn</li><br>
+                    <li><span class="fas fa-envelope"></span>erasmus.tunis@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2023
+                    All Rights Reserved by
+                    <a href="#">Wassalni</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class=" fab fa-google-plus-square"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

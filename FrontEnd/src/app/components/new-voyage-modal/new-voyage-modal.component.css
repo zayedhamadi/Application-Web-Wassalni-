@@ -1,0 +1,37 @@
+/* Add this CSS to your styles.css or component CSS file */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: #ccc;
+
+}
+
+.modern-form {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modern-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modern-form input[type="text"],
+.modern-form input[type="email"],
+.modern-form input[type="password"],
+.modern-form input[type="number"],
+.modern-form select,
+.modern-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}

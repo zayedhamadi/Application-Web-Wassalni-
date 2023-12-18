@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "7aaacacf-e4b6-421b-bd59-800671576f6e",
+		"name": "Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27583315"
+	},
+	"item": [
+		{
+			"name": "signinConductor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"zayedh80@gmail.com\",\r\n    \"password\": \"zayed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/auth/signinConductor",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"signinConductor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signinAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pi@gmail.com\",\r\n    \"password\": \"pi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/admin/auth/signinAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"admin",
+						"auth",
+						"signinAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signupConductor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"taher@gmail.com\",\r\n    \"password\": \"taher\",\r\n    \"tel\":56478932,\r\n    \"fullname\":\"taher \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/auth/signupConductor",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"auth",
+						"signupConductor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signupAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"taher@gmail.com\",\r\n    \"password\": \"taher\",\r\n    \"tel\":55555555,\r\n    \"fullname\":\"taher\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/admin/auth/signupAdmin",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"admin",
+						"auth",
+						"signupAdmin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

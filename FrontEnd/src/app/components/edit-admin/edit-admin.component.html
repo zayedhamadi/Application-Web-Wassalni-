@@ -1,0 +1,169 @@
+<div class="page d-flex">
+    <div class="sidebar bg-white p-20 p-relative">
+        <h3 class="p-relative txt-c mt-0">Admin</h3>
+        <ul>
+            <li>
+                <a class="active d-flex align-center fs-14 c-black rad-6 p-10" href="/editAdmin">
+                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="settings.html">
+                    <i class="fa-solid fa-gear fa-fw"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="profile.html">
+                    <i class="fa-regular fa-user fa-fw"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="projects.html">
+                    <i class="fa-solid fa-diagram-project fa-fw"></i>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" routerLink="/listevoitures">
+                    <i class="fas fa-car"></i>
+                    <span>Voiture</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" routerLink="/listConductors">
+                    <i class="fa-regular fa-circle-user fa-fw"></i>
+                    <span>Conducteurs</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="files.html">
+                    <i class="fa-regular fa-file fa-fw"></i>
+                    <span>Files</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" href="plans.html">
+                    <i class="fa-regular fa-credit-card fa-fw"></i>
+                    <span>Plans</span>
+                </a>
+            </li>
+
+            <li>
+                <a class="d-flex align-center fs-14 c-black rad-6 p-10" routerLink="/home">
+                    <i class="fa fa-sign-out"></i>
+                    <span>log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="content w-full">
+        <!-- Start Head -->
+        <div class="head bg-white p-15 between-flex">
+            <div class="search p-relative">
+                <input class="p-10" type="search" placeholder="Type A Keyword" />
+            </div>
+            <div class="icons d-flex align-center">
+                <span class="notification p-relative">
+                    <i class="fa-regular fa-bell fa-lg"></i>
+                </span>
+                <img src="assets/imgs/avatar.png" alt="" />
+            </div>
+        </div>
+        <!-- End Head -->
+        <h1 class="p-relative">Dashboard</h1>
+        <div class="wrapper d-grid gap-20">
+            <!-- Start Welcome Widget -->
+            <div class="welcome bg-white rad-10 txt-c-mobile block-mobile">
+                <div class="intro p-20 d-flex space-between bg-eee">
+                    <div>
+                        <h2 class="m-0">Welcome</h2>
+                        <p class="c-grey mt-5">Admin</p>
+                    </div>
+                    <img class="hide-mobile" src="assets/imgs/welcome.png" alt="" />
+                </div>
+                <img src="assets/imgs/avatar.png" alt="" class="avatar" />
+                <div class="body txt-c d-flex p-20 mt-20 mb-20 block-mobile">
+                    <div>Osama Elzero <span class="d-block c-grey fs-14 mt-10">Developer</span></div>
+                    <div>80 <span class="d-block c-grey fs-14 mt-10">Projects</span></div>
+                    <div>$8500 <span class="d-block c-grey fs-14 mt-10">Earned</span></div>
+                </div>
+                <a href="profile.html" class="visit d-block fs-14 bg-blue c-white w-fit btn-shape">Profile</a>
+            </div>
+            <!-- End Welcome Widget -->
+            <!-- Start Quick Draft Widget -->
+            <div class="quick-draft p-20 bg-white rad-10">
+                <h2 class="mt-0 mb-10">Quick Draft</h2>
+                <p class="mt-0 mb-20 c-grey fs-15">Write A Draft For Your Ideas</p>
+                <form>
+                    <input class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" type="text" placeholder="Title" />
+                    <textarea class="d-block mb-20 w-full p-10 b-none bg-eee rad-6"
+                        placeholder="Your Thought"></textarea>
+                    <input class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit"
+                        value="Save" />
+                </form>
+            </div>
+            <!-- End Quick Draft Widget -->
+            <!-- Start Targets Widget -->
+
+
+            <div class="container"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; ">
+
+                <div class="container" style="background-color: aliceblue;width: 500px; border-radius: 20px;">
+                    <h2 class="mb-4 text-center" style="font-size: medium ;">Create New Admin </h2>
+                    <form #registerform="ngForm" class="needs-validation" novalidate
+                        (ngSubmit)="register(registerform)">
+
+
+
+
+                        <div class="form-group">
+                            <label class="form-label" for="email"><i class="fas fa-envelope"></i> mail address</label>
+                            <input #email (ngModel)="signup.email" required type="email"
+                                class="form-control bg-gray-200 appearance-none border-2 border" name="email"
+                                placeholder="Enter your email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="tel"><i class="fas fa-phone"></i> telelephone</label>
+                            <input #tel (ngModel)="signup.tel" type="number" required
+                                class="form-control bg-gray-200 appearance-none border-2 border" name="tel"
+                                maxlength="8" placeholder="tel">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="fullname"><i class="fas fa-user"></i> fullname </label>
+                            <input #fullname (ngModel)="signup.fullname" type="text" required
+                                class="form-control bg-gray-200 appearance-none border-2 border" name="fullname"
+                                maxlength="30" placeholder="fullanme">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password"><i class="fas fa-lock"></i> Password</label>
+                            <input name="password" #password (ngModel)="signup.password" required type="password"
+                                class="form-control  bg-gray-200 appearance-none border-2 border"
+                                placeholder="******************" [type]="changetype ? 'password' : 'text'">
+                            <span class="eyeicon" (click)="view()"><i
+                                    [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"></i></span>
+                        </div>
+
+
+                        <div class="form-check mb-4">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline  w-100"><i
+                                class="fas fa-plus-circle " cButton color="info" shape="rounded-pill"> </i>
+                            &nbsp;Submit</button>
+                    </form>
+
+                    <br> <br>
+
+
+                </div>
+            </div>
